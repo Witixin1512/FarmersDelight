@@ -52,10 +52,10 @@ public class ModItems
 			() -> new FuelBlockItem(ModBlocks.SAFETY_NET.get(), new Item.Properties().tab(FarmersDelight.ITEM_GROUP), 200));
 	public static final RegistryObject<Item> OAK_PANTRY = ITEMS.register("oak_pantry",
 			() -> new FuelBlockItem(ModBlocks.OAK_PANTRY.get(), new Item.Properties().tab(FarmersDelight.ITEM_GROUP), 300));
-	public static final RegistryObject<Item> BIRCH_PANTRY = ITEMS.register("birch_pantry",
-			() -> new FuelBlockItem(ModBlocks.BIRCH_PANTRY.get(), new Item.Properties().tab(FarmersDelight.ITEM_GROUP), 300));
 	public static final RegistryObject<Item> SPRUCE_PANTRY = ITEMS.register("spruce_pantry",
 			() -> new FuelBlockItem(ModBlocks.SPRUCE_PANTRY.get(), new Item.Properties().tab(FarmersDelight.ITEM_GROUP), 300));
+	public static final RegistryObject<Item> BIRCH_PANTRY = ITEMS.register("birch_pantry",
+			() -> new FuelBlockItem(ModBlocks.BIRCH_PANTRY.get(), new Item.Properties().tab(FarmersDelight.ITEM_GROUP), 300));
 	public static final RegistryObject<Item> JUNGLE_PANTRY = ITEMS.register("jungle_pantry",
 			() -> new FuelBlockItem(ModBlocks.JUNGLE_PANTRY.get(), new Item.Properties().tab(FarmersDelight.ITEM_GROUP), 300));
 	public static final RegistryObject<Item> ACACIA_PANTRY = ITEMS.register("acacia_pantry",
@@ -167,6 +167,8 @@ public class ModItems
 			() -> new RiceCropItem(ModBlocks.RICE_CROP.get(), new Item.Properties().tab(FarmersDelight.ITEM_GROUP)));
 	public static final RegistryObject<Item> CABBAGE_SEEDS = ITEMS.register("cabbage_seeds", () -> new BlockNamedItem(ModBlocks.CABBAGE_CROP.get(), new Item.Properties().tab(FarmersDelight.ITEM_GROUP)));
 	public static final RegistryObject<Item> TOMATO_SEEDS = ITEMS.register("tomato_seeds", () -> new BlockNamedItem(ModBlocks.TOMATO_CROP.get(), new Item.Properties().tab(FarmersDelight.ITEM_GROUP)));
+	public static final RegistryObject<Item> ROTTEN_TOMATO = ITEMS.register("rotten_tomato",
+			() -> new RottenTomatoItem(new Item.Properties().stacksTo(16).tab(FarmersDelight.ITEM_GROUP)));
 
 	// Foodstuffs
 	public static final RegistryObject<Item> FRIED_EGG = ITEMS.register("fried_egg",

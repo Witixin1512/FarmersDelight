@@ -30,7 +30,7 @@ import java.util.Random;
 public class NourishedHungerOverlay
 {
 	protected int foodIconsOffset;
-	private static final ResourceLocation MOD_ICONS_TEXTURE = new ResourceLocation(FarmersDelight.MODID, "textures/gui/nourished.png");
+	private static final ResourceLocation MOD_ICONS_TEXTURE = new ResourceLocation(FarmersDelight.MODID, "textures/gui/fd_icons.png");
 
 	public static void init() {
 		MinecraftForge.EVENT_BUS.register(new NourishedHungerOverlay());
@@ -94,7 +94,7 @@ public class NourishedHungerOverlay
 			}
 
 			// Background texture
-			mc.gui.blit(matrixStack, x, y, 0, 0, 11, 11);
+			mc.gui.blit(matrixStack, x, y, 0, 0, 9, 9);
 
 			float effectiveHungerOfBar = (stats.getFoodLevel()) / 2.0F - j;
 			int naturalHealingOffset = naturalHealing ? 18 : 0;

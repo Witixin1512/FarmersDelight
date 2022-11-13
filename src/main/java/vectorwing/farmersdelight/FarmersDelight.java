@@ -18,7 +18,6 @@ import vectorwing.farmersdelight.crafting.CookingPotRecipe;
 import vectorwing.farmersdelight.crafting.CuttingBoardRecipe;
 import vectorwing.farmersdelight.crafting.ingredients.ToolIngredient;
 import vectorwing.farmersdelight.registry.*;
-import vectorwing.farmersdelight.setup.ClientEventHandler;
 import vectorwing.farmersdelight.setup.CommonEventHandler;
 import vectorwing.farmersdelight.setup.Configuration;
 
@@ -38,7 +37,6 @@ public class FarmersDelight
 		final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
 		modEventBus.addListener(CommonEventHandler::init);
-		modEventBus.addListener(ClientEventHandler::init);
 		modEventBus.addGenericListener(IRecipeSerializer.class, this::registerRecipeSerializers);
 
 		ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Configuration.COMMON_CONFIG);
@@ -54,6 +52,7 @@ public class FarmersDelight
 		ModTileEntityTypes.TILES.register(modEventBus);
 		ModContainerTypes.CONTAINER_TYPES.register(modEventBus);
 		ModRecipeSerializers.RECIPE_SERIALIZERS.register(modEventBus);
+		ModEntityTypes.ENTITIES.register(modEventBus);
 
 		MinecraftForge.EVENT_BUS.register(this);
 	}
