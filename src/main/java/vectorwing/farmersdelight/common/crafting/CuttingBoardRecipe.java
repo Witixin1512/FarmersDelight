@@ -160,11 +160,11 @@ public class CuttingBoardRecipe implements Recipe<RecipeWrapper>
 	@Override
 	public int hashCode() {
 		int result = getId().hashCode();
-		result = 31 * result + (getGroup() != null ? getGroup().hashCode() : 0);
+		result = 31 * result + getGroup().hashCode();
 		result = 31 * result + input.hashCode();
 		result = 31 * result + getTool().hashCode();
 		result = 31 * result + getResults().hashCode();
-		result = 31 * result + (soundEvent != null ? soundEvent.hashCode() : 0);
+		result = 31 * result + soundEvent.hashCode();
 		return result;
 	}
 
